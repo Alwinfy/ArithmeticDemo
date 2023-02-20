@@ -59,7 +59,7 @@ public class ArithmeticEngine {
 				throw new IllegalStateException("Not enough args on stack for operator: " + operator);
 			}
 			var iota = iotas.pop();
-			hash = new HashCons.Pair(iota.getClass(), hash);
+			hash = new HashCons.Pair(iota.getType(), hash);
 			args.add(iota);
 		}
 		Collections.reverse(args);
